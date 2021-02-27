@@ -1,0 +1,83 @@
+body {
+    background-color: #1a294a;
+}
+
+.main {
+    max-width: 700px;
+    background-color: #1a294a;
+    margin: 0 auto;
+}
+
+.header {
+    border: 3px solid rgb(91, 107, 132);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-title, .header-score {
+    width: 150px;
+    height: 100px;
+}
+
+.header-score {
+    border-radius: 15px;
+    background-color: #fbfbfb;
+    text-align: center;
+}
+
+.figures {
+    margin: 60px auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: url(images/bg-triangle.svg) no-repeat;
+    background-position: center;
+}
+
+#paper-figure, #scissors-figure, #rock-figure {
+    width: 150px;
+    height: 150px;
+    border: 25px solid gray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(234, 234, 234);
+}
+
+#paper-figure img, #scissors-figure img, #rock-figure img {
+    width: 45%;
+    align-self: center;
+}
+
+#paper-figure {
+    border: 25px solid rgb(72, 104, 241);
+    box-shadow: 0px 10px 0px 0px rgba(72, 104, 241, 0.4) inset, 0px 10px 0px 0px rgba(72, 104, 241, 0.4);
+}
+
+#scissors-figure {
+    border: 25px solid rgb(235, 159, 14);
+    box-shadow: 0px 10px 0px 0px rgba(235, 159, 14, 0.4) inset, 0px 10px 0px 0px rgba(235, 159, 14, 0.4);
+}
+
+#rock-figure {
+    border: 25px solid rgb(223, 64, 94);
+    box-shadow: 0px 10px 0px 0px rgba(223, 64, 94, 0.4) inset, 0px 10px 0px 0px rgba(223, 64, 94, 0.4);
+}
+
+#paper-figure:hover {
+    box-shadow: 0px 10px 0px 0px rgba(72, 104, 241, 0.4) inset, 0px 10px 0px 0px rgba(72, 104, 241, 0.4), 0px 0px 35px 5px rgba(234, 234, 234, 0.3);
+}
+
+#scissors-figure:hover {
+    border: 25px solid rgb(235, 159, 14);
+    box-shadow: 0px 10px 0px 0px rgba(235, 159, 14, 0.4) inset, 0px 10px 0px 0px rgba(235, 159, 14, 0.4), 0px 0px 35px 5px rgba(234, 234, 234, 0.3);
+}
+
+#rock-figure:hover {
+    border: 25px solid rgb(223, 64, 94);
+    box-shadow: 0px 10px 0px 0px rgba(223, 64, 94, 0.4) inset, 0px 10px 0px 0px rgba(223, 64, 94, 0.4), 0px 0px 35px 5px rgba(234, 234, 234, 0.3);
+}
