@@ -1,20 +1,16 @@
 body {
     background-color: #1a294a;
+    font-family: 'Anton', sans-serif;
 }
 
-.main {
-    max-width: 700px;
-    background-color: #1a294a;
-    margin: 0 auto;
-}
-
-.header {
-    border: 3px solid rgb(91, 107, 132);
-    border-radius: 15px;
+header {
+    width: 700px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
     padding: 20px;
+    border: 3px solid rgb(91, 107, 132);
 }
 
 .header-title, .header-score {
@@ -23,17 +19,39 @@ body {
 }
 
 .header-score {
-    border-radius: 15px;
     background-color: #fbfbfb;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
 
-.figures {
-    margin: 60px auto;
-    width: 80%;
+#header-score-text {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgb(58, 78, 175);
+    margin: 0;
+}
+
+#header-score-count {
+    font-size: 52px;
+    color: rgb(92, 88, 111);
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+header, .header-score, .modal-rules-content {
+    border-radius: 15px;
+}
+
+.choose-figures {
+    width: 500px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: 60px auto;
     background: url(images/bg-triangle.svg) no-repeat;
     background-position: center;
 }
@@ -41,10 +59,9 @@ body {
 #paper-figure, #scissors-figure, #rock-figure {
     width: 150px;
     height: 150px;
-    border: 25px solid gray;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
+    border-radius: 50%;
     background-color: rgb(234, 234, 234);
 }
 
@@ -73,11 +90,77 @@ body {
 }
 
 #scissors-figure:hover {
-    border: 25px solid rgb(235, 159, 14);
     box-shadow: 0px 10px 0px 0px rgba(235, 159, 14, 0.4) inset, 0px 10px 0px 0px rgba(235, 159, 14, 0.4), 0px 0px 35px 5px rgba(234, 234, 234, 0.3);
 }
 
 #rock-figure:hover {
-    border: 25px solid rgb(223, 64, 94);
     box-shadow: 0px 10px 0px 0px rgba(223, 64, 94, 0.4) inset, 0px 10px 0px 0px rgba(223, 64, 94, 0.4), 0px 0px 35px 5px rgba(234, 234, 234, 0.3);
+}
+
+#show-modal-rules {
+    width: 130px;
+    height: 45px;
+    border: 2px solid rgb(135, 139, 166);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 50px;
+    bottom: 0px;
+}
+
+#show-modal-rules p {
+    font-size: 16px;
+    color: #f9feff;
+    letter-spacing: 4px;
+}
+
+#show-modal-rules:hover {
+    box-shadow: 0px 0px 20px 5px rgba(135, 139, 166, 0.3);
+}
+
+.modal-rules {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-rules-content {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    padding: 35px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rules-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rules-img {
+    margin: 20px auto;
+    width: 90%;
+}
+
+.rules-wrap p {
+    font-size: 24px;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
 }
