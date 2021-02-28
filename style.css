@@ -51,12 +51,12 @@ header, .header-score, .modal-rules-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 60px auto;
+    margin: 60px auto 0px;
     background: url(images/bg-triangle.svg) no-repeat;
     background-position: center;
 }
 
-#paper-figure, #scissors-figure, #rock-figure {
+.paper-figure, .scissors-figure, .rock-figure {
     width: 150px;
     height: 150px;
     display: flex;
@@ -65,35 +65,35 @@ header, .header-score, .modal-rules-content {
     background-color: rgb(234, 234, 234);
 }
 
-#paper-figure img, #scissors-figure img, #rock-figure img {
+.paper-figure img, .scissors-figure img, .rock-figure img {
     width: 45%;
     align-self: center;
 }
 
-#paper-figure {
+.paper-figure {
     border: 25px solid rgb(72, 104, 241);
     box-shadow: 0px 10px 0px 0px rgba(72, 104, 241, 0.4) inset, 0px 10px 0px 0px rgba(72, 104, 241, 0.4);
 }
 
-#scissors-figure {
+.scissors-figure {
     border: 25px solid rgb(235, 159, 14);
     box-shadow: 0px 10px 0px 0px rgba(235, 159, 14, 0.4) inset, 0px 10px 0px 0px rgba(235, 159, 14, 0.4);
 }
 
-#rock-figure {
+.rock-figure {
     border: 25px solid rgb(223, 64, 94);
     box-shadow: 0px 10px 0px 0px rgba(223, 64, 94, 0.4) inset, 0px 10px 0px 0px rgba(223, 64, 94, 0.4);
 }
 
-#paper-figure:hover {
+.paper-figure:hover {
     box-shadow: 0px 10px 0px 0px rgba(72, 104, 241, 0.4) inset, 0px 10px 0px 0px rgba(72, 104, 241, 0.4), 0px 0px 35px 5px rgba(234, 234, 234, 0.3);
 }
 
-#scissors-figure:hover {
+.scissors-figure:hover {
     box-shadow: 0px 10px 0px 0px rgba(235, 159, 14, 0.4) inset, 0px 10px 0px 0px rgba(235, 159, 14, 0.4), 0px 0px 35px 5px rgba(234, 234, 234, 0.3);
 }
 
-#rock-figure:hover {
+.rock-figure:hover {
     box-shadow: 0px 10px 0px 0px rgba(223, 64, 94, 0.4) inset, 0px 10px 0px 0px rgba(223, 64, 94, 0.4), 0px 0px 35px 5px rgba(234, 234, 234, 0.3);
 }
 
@@ -107,8 +107,8 @@ header, .header-score, .modal-rules-content {
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: 50px;
-    bottom: 0px;
+    right: 5%;
+    bottom: 5%;
 }
 
 #show-modal-rules p {
@@ -163,4 +163,46 @@ header, .header-score, .modal-rules-content {
 
 .hidden {
     display: none;
+}
+
+.player-vs-computer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 50px auto 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.player-vs-computer p {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+}
+
+#game-result-text {
+    font-size: 36px;
+    margin: 0px;
+}
+
+#play-again-btn {
+    width: 180px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0px;
+    font-family: 'Anton';
+    letter-spacing: 3px;
+    margin-top: 10px;
+    color: rgb(67, 68, 88);
+}
+
+#player-figure, #computer-figure {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(234, 234, 234);
 }
