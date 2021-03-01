@@ -1,16 +1,20 @@
 body {
-    background-color: #1a294a;
-    font-family: 'Anton', sans-serif;
+    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.app {
+    max-width: 1366px;
 }
 
 header {
-    width: 700px;
+    max-width: 700px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     padding: 20px;
-    border: 3px solid rgb(91, 107, 132);
+    border: 3px solid hsl(217, 16%, 45%);
 }
 
 .header-title, .header-score {
@@ -31,13 +35,13 @@ header {
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: rgb(58, 78, 175);
+    color: hsl(229, 64%, 46%);
     margin: 0;
 }
 
 #header-score-count {
     font-size: 52px;
-    color: rgb(92, 88, 111);
+    color: hsl(229, 25%, 31%);
     margin: 0;
     letter-spacing: 3px;
 }
@@ -47,7 +51,7 @@ header, .header-score, .modal-rules-content {
 }
 
 .choose-figures {
-    width: 500px;
+    max-width: 500px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -71,30 +75,18 @@ header, .header-score, .modal-rules-content {
 }
 
 .paper-figure {
-    border: 25px solid rgb(72, 104, 241);
+    border: 25px solid hsl(230, 89%, 65%);
     box-shadow: 0px 10px 0px 0px rgba(72, 104, 241, 0.4) inset, 0px 10px 0px 0px rgba(72, 104, 241, 0.4);
 }
 
 .scissors-figure {
-    border: 25px solid rgb(235, 159, 14);
+    border: 25px solid hsl(40, 84%, 53%);
     box-shadow: 0px 10px 0px 0px rgba(235, 159, 14, 0.4) inset, 0px 10px 0px 0px rgba(235, 159, 14, 0.4);
 }
 
 .rock-figure {
-    border: 25px solid rgb(223, 64, 94);
+    border: 25px solid hsl(349, 70%, 56%);
     box-shadow: 0px 10px 0px 0px rgba(223, 64, 94, 0.4) inset, 0px 10px 0px 0px rgba(223, 64, 94, 0.4);
-}
-
-.paper-figure:hover {
-    box-shadow: 0px 10px 0px 0px rgba(72, 104, 241, 0.4) inset, 0px 10px 0px 0px rgba(72, 104, 241, 0.4), 0px 0px 35px 5px rgba(234, 234, 234, 0.3);
-}
-
-.scissors-figure:hover {
-    box-shadow: 0px 10px 0px 0px rgba(235, 159, 14, 0.4) inset, 0px 10px 0px 0px rgba(235, 159, 14, 0.4), 0px 0px 35px 5px rgba(234, 234, 234, 0.3);
-}
-
-.rock-figure:hover {
-    box-shadow: 0px 10px 0px 0px rgba(223, 64, 94, 0.4) inset, 0px 10px 0px 0px rgba(223, 64, 94, 0.4), 0px 0px 35px 5px rgba(234, 234, 234, 0.3);
 }
 
 #show-modal-rules {
@@ -114,7 +106,7 @@ header, .header-score, .modal-rules-content {
 #show-modal-rules p {
     font-size: 16px;
     color: #f9feff;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 }
 
 #show-modal-rules:hover {
@@ -156,9 +148,11 @@ header, .header-score, .modal-rules-content {
 }
 
 .rules-wrap p {
-    font-size: 24px;
-    letter-spacing: 4px;
+    font-size: 28px;
+    letter-spacing: 1px;
     margin: 0;
+    font-weight: bold;
+    color: hsl(229, 25%, 31%);
 }
 
 .hidden {
@@ -168,34 +162,42 @@ header, .header-score, .modal-rules-content {
 .player-vs-computer {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
     margin: 50px auto 20px;
-    width: 80%;
+    max-width: 900px;
     text-align: center;
 }
 
 .player-vs-computer p {
     color: white;
     font-size: 18px;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     margin-bottom: 50px;
 }
 
+.game-result {
+    align-self: center;
+}
+
 #game-result-text {
-    font-size: 36px;
+    font-size: 42px;
     margin: 0px;
 }
 
 #play-again-btn {
-    width: 180px;
-    height: 40px;
+    width: 185px;
+    height: 45px;
     border-radius: 10px;
     border: 0px;
-    font-family: 'Anton';
+    font-family: 'Barlow Semi Condensed', sans-serif;
     letter-spacing: 3px;
     margin-top: 10px;
     color: rgb(67, 68, 88);
+}
+
+#play-again-btn:hover {
+    color: hsl(348, 48%, 48%);
 }
 
 #player-figure, #computer-figure {
@@ -205,4 +207,18 @@ header, .header-score, .modal-rules-content {
     justify-content: center;
     border-radius: 50%;
     background-color: rgb(234, 234, 234);
+}
+
+.winner {
+	box-shadow: 0px 0px 0px 60px rgba(195, 209, 219, 0.2), 0px 0px 0px 120px rgba(195, 209, 219, 0.1), 0px 0px 0px 200px rgba(195, 209, 219, 0.05);
+    border-radius: 50%;
+    transition: 0.2s ease-out;
+}
+
+#header-score-text, #show-modal-rules p {
+    font-weight: 600;
+}
+
+#header-score-count, #play-again-btn, .player-vs-computer p {
+    font-weight: 700;
 }

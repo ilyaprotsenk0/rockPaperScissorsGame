@@ -6,70 +6,77 @@
   <title>Rock, Paper, Scissors</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="header-title">
-      <img src="images/logo.svg" alt="logo">
-    </div>
-    <div class="header-score">
-      <p id="header-score-text">Score</p>
-      <p id="header-score-count">0</p>
-    </div>
-  </header>
+  <div class="app">
+    
+    <header>
+      <div class="header-title">
+        <img src="images/logo.svg" alt="logo">
+      </div>
+      <div class="header-score">
+        <p id="header-score-text">Score</p>
+        <p id="header-score-count">0</p>
+      </div>
+    </header>
 
-  <section class="choose-figures" id="choose-figure-block">
-    <div class="paper-figure" id="paper-figure" data-id="0">
-      <img src="images/icon-paper.svg" alt="paper-figure">
-    </div>
-    <div class="scissors-figure" id="scissors-figure" data-id="1">
-      <img src="images/icon-scissors.svg" alt="scissors-figure">
-    </div>
-    <div class="rock-figure" id="rock-figure" data-id="2">
-      <img src="images/icon-rock.svg" alt="rock-figure">
-    </div>
-  </section>
+    <section class="choose-figures" id="choose-figure-block">
+      <div class="paper-figure" id="paper-figure" data-id="0">
+        <img src="images/icon-paper.svg" alt="paper-figure">
+      </div>
+      <div class="scissors-figure" id="scissors-figure" data-id="1">
+        <img src="images/icon-scissors.svg" alt="scissors-figure">
+      </div>
+      <div class="rock-figure" id="rock-figure" data-id="2">
+        <img src="images/icon-rock.svg" alt="rock-figure">
+      </div>
+    </section>
 
-  <section class="hidden" id="player-vs-computer-block">
-    <div class="player-vs-computer">
-      <div class="player-choose-wrap">
-        <p>YOU PICKED</p>
-        <div id="player-figure">
-          <img id="player-figure-img" src="images/icon-paper.svg" alt="paper-figure">
+    <section class="hidden" id="player-vs-computer-block">
+      <div class="player-vs-computer">
+        <div class="player-choose-wrap">
+          <p>YOU PICKED</p>
+          <div>
+            <div id="player-figure">
+              <img id="player-figure-img" src="images/icon-paper.svg" alt="paper-figure">
+            </div>
+          </div>
+        </div>
+        <div class="game-result" id="game-result-block">
+          <p id="game-result-text">YOU WIN</p>
+          <button id="play-again-btn">PLAY AGAIN</button>
+        </div>
+        <div class="computer-choose-wrap">
+          <p>THE HOUSE PICKED</p>
+          <div>
+            <div id="computer-figure">
+              <img id="computer-figure-img" src="images/icon-paper.svg" alt="paper-figure">
+            </div>
+          </div>
         </div>
       </div>
-      <div class="game-result">
-        <p id="game-result-text">YOU WIN</p>
-        <button id="play-again-btn">PLAY AGAIN</button>
-      </div>
-      <div class="computer-choose-wrap">
-        <p>THE HOUSE PICKED</p>
-        <div id="computer-figure">
-          <img id="computer-figure-img" src="images/icon-paper.svg" alt="paper-figure">
+    </section>
+    
+    <div id="show-modal-rules">
+      <p>RULES</p>
+    </div>
+
+    <div class="modal-rules hidden" id="rules-block">
+      <div class="modal-rules-content">
+        <div class="rules-wrap">
+          <p>RULES</p>
+          <div id="close-modal-rules">
+            <img src="images/icon-close.svg" alt="icon-close">
+          </div>
+        </div>
+        <div class="rules-img">
+          <img src="images/image-rules.svg" alt="rules-image">
         </div>
       </div>
     </div>
-  </section>
-  
-  <div id="show-modal-rules">
-    <p>RULES</p>
+
   </div>
-
-  <div class="modal-rules hidden" id="rules-block">
-    <div class="modal-rules-content">
-      <div class="rules-wrap">
-        <p>RULES</p>
-        <div id="close-modal-rules">
-          <img src="images/icon-close.svg" alt="icon-close">
-        </div>
-      </div>
-      <div class="rules-img">
-        <img src="images/image-rules.svg" alt="rules-image">
-      </div>
-    </div>
-  </div>
-
   <script src="index.js"></script>
 </body>
 </html>
