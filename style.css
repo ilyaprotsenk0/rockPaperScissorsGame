@@ -5,6 +5,7 @@ body {
 
 .app {
     max-width: 1366px;
+    margin: 0 auto;
 }
 
 header {
@@ -98,9 +99,8 @@ header, .header-score, .modal-rules-content {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    right: 5%;
-    bottom: 5%;
+    float: right;
+    margin: 20px;
 }
 
 #show-modal-rules p {
