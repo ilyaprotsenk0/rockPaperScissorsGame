@@ -6,6 +6,7 @@ body {
 .app {
     max-width: 1366px;
     margin: 0 auto;
+    position: relative;
 }
 
 header {
@@ -53,10 +54,11 @@ header, .header-score, .modal-rules-content {
 
 .choose-figures {
     max-width: 500px;
+    height: 400px;
+    margin: 60px auto 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 60px auto 0px;
     background: url(images/bg-triangle.svg) no-repeat;
     background-position: center;
 }
@@ -99,8 +101,10 @@ header, .header-score, .modal-rules-content {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    float: right;
     margin: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 #show-modal-rules p {
@@ -164,7 +168,8 @@ header, .header-score, .modal-rules-content {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-evenly;
-    margin: 50px auto 20px;
+    height: 400px;
+    margin: 60px auto 0px;
     max-width: 900px;
     text-align: center;
 }
