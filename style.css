@@ -152,6 +152,7 @@ header, .header-score, .modal-rules-content {
 }
 
 .rules-wrap p {
+    margin-top: 0px;
     font-size: 28px;
     letter-spacing: 1px;
     margin: 0;
@@ -215,7 +216,7 @@ header, .header-score, .modal-rules-content {
 }
 
 .winner {
-	box-shadow: 0px 0px 0px 60px rgba(195, 209, 219, 0.2), 0px 0px 0px 120px rgba(195, 209, 219, 0.1), 0px 0px 0px 200px rgba(195, 209, 219, 0.05);
+	box-shadow: 0px 0px 0px 60px rgba(195, 209, 219, 0.1), 0px 0px 0px 120px rgba(195, 209, 219, 0.05), 0px 0px 0px 200px rgba(195, 209, 219, 0.02);
     border-radius: 50%;
     transition: 0.2s ease-out;
 }
@@ -226,4 +227,120 @@ header, .header-score, .modal-rules-content {
 
 #header-score-count, #play-again-btn, .player-vs-computer p {
     font-weight: 700;
+}
+
+@media (max-width: 375px) {
+    .app {
+        width: 375px;
+    }
+
+    header {
+        width: 320px;
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 30px auto 0px;
+    }
+
+    .header-score {
+        width: 85px;
+        height: 80px;
+    }
+
+    .header-title, .header-title img {
+        height: 80px;
+        margin-left: 5px;
+    }
+
+    .header-score {
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    #header-score-text {
+        font-size: 12px;
+    }
+
+    #header-score-count {
+        font-size: 48px;
+    }
+
+    .paper-figure, .scissors-figure, .rock-figure {
+        width: 120px;
+        height: 120px;
+    }
+
+    .paper-figure {
+        border: 17.5px solid hsl(230, 89%, 65%);
+    }
+
+    .scissors-figure {
+        border: 17.5px solid hsl(40, 84%, 53%);
+    }
+
+    .rock-figure {
+        border: 17.5px solid hsl(349, 70%, 56%);
+    }
+
+    .choose-figures, .player-vs-computer {
+        width: 370px;
+        height: 370px;
+    }
+
+    #show-modal-rules {
+        position: relative;
+        margin: 20px auto 0px;
+    }
+
+    .player-choose-wrap, .computer-choose-wrap {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 135px;
+    }
+
+    #player-figure, #computer-figure {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    .player-vs-computer {
+        position: relative;
+    }
+
+    .game-result {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .player-vs-computer p {
+        font-size: 16px;
+        margin-top: 40px;
+        margin-bottom: initial;
+    }
+
+    .modal-rules-content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .rules-wrap {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rules-wrap p {
+        margin-top: 50px;
+    }
+
+    .rules-img {
+        position: absolute;
+        top: 200px;
+    }
+
+    .winner {
+        box-shadow: 0px 0px 0px 30px rgba(195, 209, 219, 0.1), 0px 0px 0px 60px rgba(195, 209, 219, 0.05), 0px 0px 0px 120px rgba(195, 209, 219, 0.02);
+        border-radius: 50%;
+        transition: 0.2s ease-out;
+    }
 }
